@@ -43,7 +43,7 @@ def update(letter,word,ans):
     for i in word:
         word1+=i
     word=word1
-    display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>", unsafe_allow_html=True)
+    display.markdown( f"<h1 style='text-align: center; color: white;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
 
