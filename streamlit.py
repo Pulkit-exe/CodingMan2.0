@@ -43,7 +43,7 @@ def update(letter,word,ans):
     for i in word:
         word1+=i
     word=word1
-    display.markdown( f"<h1 style='text-align: center; color: white;'>{word}</h1>", unsafe_allow_html=True)
+    display.markdown(f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
 
@@ -72,9 +72,9 @@ alpha[0]=t1.text_input('Enter a letter:',max_chars=1)
 count=1
 
 def main(m):
-    count+=1
     word = update(alpha[m],word,ans)
     win_meter(alpha[m],ans)
+    count+=1
     
 if alpha[0]:
     main(0)
