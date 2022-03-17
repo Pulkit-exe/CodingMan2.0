@@ -61,10 +61,7 @@ with tab[4]:
 with tab[5]:
     t6=st.empty()
 
-def main(m):
-    count+=1
-    word = update(alpha[m],word,ans)
-    win_meter(alpha[m],ans)
+
 
 t6.image('hangmanpics/1.jpg')
 
@@ -72,6 +69,13 @@ t6.image('hangmanpics/1.jpg')
 alpha[0]=t1.text_input('Enter a letter:',max_chars=1)
 
 # cannot use looping construct here because of the inability to update variable names within loops..
+count=1
+
+def main(m):
+    count+=1
+    word = update(alpha[m],word,ans)
+    win_meter(alpha[m],ans)
+    
 if alpha[0]:
     main(0)
     alpha[1]=t2.text_input('Enter a letter:',max_chars=1)
