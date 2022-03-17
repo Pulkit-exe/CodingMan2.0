@@ -21,6 +21,9 @@ for i in range(10):
 
 
 def win_meter(letter,ans):
+    global w_count
+    global l_count
+    
     if letter in ans:
         w_count+=1
     else:
@@ -40,7 +43,7 @@ def update(letter,word,ans):
     for i in word:
         word1+=i
     word=word1
-    display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>")
+    display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
 
@@ -58,10 +61,10 @@ with tab[4]:
 with tab[5]:
     t6=st.empty()
 
-def main(num):
+def main(m):
     count+=1
-    word = update(alpha[num],word,ans)
-    win_meter(alpha[num],ans)
+    word = update(alpha[m],word,ans)
+    win_meter(alpha[m],ans)
 
 t6.image('hangmanpics/1.jpg')
 
@@ -118,6 +121,7 @@ elif l_count == 3:
     t6.image('hangmanpics/4.jpg')
 elif l_count == 4:
     t6.image('hangmanpics/5.jpg')
+    st.write('U lose :(')
 
 
 
