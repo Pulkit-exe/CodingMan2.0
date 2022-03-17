@@ -63,7 +63,7 @@ def main(num):
     word = update(alpha[num],word,ans)
     win_meter(alpha[num],ans)
 
-t6.image('hangmanpics/1.jpeg')
+t6.image('hangmanpics/1.jpg')
 
 
 alpha[0]=t1.text_input('Enter a letter:',max_chars=1)
@@ -111,13 +111,13 @@ if alpha[0]:
 
 
 if l_count == 1:
-    t6.image('hangman_pics/pic2.jpeg')
+    t6.image('hangmanpics/2.jpg')
 elif l_count == 2:
-    t6.image('hangman_pics/pic3.jpeg')
+    t6.image('hangmanpics/3.jpg')
 elif l_count == 3:
-    t6.image('hangman_pics/pic4.jpeg')
+    t6.image('hangmanpics/4.jpg')
 elif l_count == 4:
-    t6.image('hangman_pics/pic5.jpeg')
+    t6.image('hangmanpics/5.jpg')
 
 
 
