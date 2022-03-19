@@ -39,7 +39,7 @@ def update(letter,word,ans):
             word[2*i]=letter
     
     new=''
-    word=word.join(new)
+    word=new.join(word)
     display.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
