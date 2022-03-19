@@ -14,7 +14,7 @@ count=1                                                                         
 
 
 display=st.empty()                                                                                #for displaying the word variable
-
+display.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
 alpha=['','','','','','','','','','','','','','','']                                              #for making list which stores inputs
 
 
@@ -35,10 +35,9 @@ def update(letter,word,ans):
     for i in range(n):
         if ans[i]==letter:
             word[2*i]=letter
-    word1=''
-    for i in word:
-        word1+=i
-    word=word1
+    
+    new=''
+    word=word.join(new)
     display.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
@@ -61,7 +60,11 @@ with tab[5]:
 t6.image('hangmanpics/1.jpeg')
 
 
-alpha[0]=t1.text_input('Enter a letter:',max_chars=1)
+win_meter('l',ans)
+st.write(f'{w_count}')
+st.write(f'{l_count}')
+
+update('l',word,ans)
 
 
 
