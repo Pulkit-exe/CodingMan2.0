@@ -57,7 +57,7 @@ with tab[5]:
     t6=st.empty()
 
 
-t6.image('hangmanpics/1.jpeg')
+t6.image('hangmanpics/1.jpg')
 
 
 win_meter('l',ans)
@@ -70,13 +70,13 @@ update('l',word,ans)
 
 
 if l_count == 1:
-    t6.image('hangman_pics/pic2.jpeg')
+    t6.image('hangmanpics/2.jpg')
 elif l_count == 2:
-    t6.image('hangman_pics/pic3.jpeg')
+    t6.image('hangmanpics/3.jpg')
 elif l_count == 3:
-    t6.image('hangman_pics/pic4.jpeg')
+    t6.image('hangmanpics/4.jpg')
 elif l_count == 4:
-    t6.image('hangman_pics/pic5.jpeg')
+    t6.image('hangmanpics/5.jpeg')
 
 
 
