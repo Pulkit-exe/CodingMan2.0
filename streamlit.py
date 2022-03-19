@@ -20,6 +20,8 @@ alpha=['','','','','','','','','','','','','','','']                            
 
 
 def win_meter(letter,ans):
+    global w_count
+    global l_count
     if letter in ans:
         w_count+=1
     else:
