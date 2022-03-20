@@ -73,7 +73,7 @@ j=0
 k=1
 while True:
     if letters[j] and count!=limit and lose!=4 and win!=len(text):
-        win_meter(letters[j],text)
+        win_check(letters[j],text)
         update(letters[j],word,text)
         j+=1
         k+=1
