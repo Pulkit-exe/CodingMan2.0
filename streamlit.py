@@ -21,7 +21,6 @@ def win_check(letter, text):
 
 
 def update(letter, word, text):
-   global word
    text = list(text)
    word = list(word)
    letter = letter.lower()
