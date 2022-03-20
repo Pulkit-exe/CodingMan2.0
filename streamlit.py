@@ -4,18 +4,18 @@ import streamlit as st
 
 
 st.set_page_config("CodingMan")
-lose = 0 #for tracking wrong inputs
-win = 0 #for tracking right inputs
+l_count = 0 #for tracking wrong inputs
+w_count = 0 #for tracking right inputs
 
 def win_check(letter, text):
-    global lose
-    global win
+    global l_count
+    global w_count
     if letter not in text:
-        lose += 1
+        l_count += 1
     else:
-        win += 1
+        w_count+= 1
 
-    if win == len(text):
+    if w_count == len(text):
         st.balloons()
         st.write('You Win!!!!')
 
@@ -37,7 +37,7 @@ def update(letter, word, text):
    display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>", unsafe_allow_html=True)
    return word
 st.header('CodingMan2.0')
-st.subheader('By:      Pulkit Rustagi :D')
+st.subheader('By: Pulkit Rustagi :D')
 
 display = st.empty() #for displaying the word
 
@@ -51,32 +51,31 @@ with col[1]:
 
 
                                             
-text='while'
-word = "_ _ _ _ _ "
-limit = 0  #for attemted permissible inputs; which I took 4 more than the length of the word
-count = 1  #for counting the input
-letters = ['', '', '', '', '', '','','','','','','','','',''] #for storing inputs
+ans='raise'
+word = "_ _ _ _ _ "  
+count = 1                              #for counting the input
+letters = ['','','','','','','','','','']                                            #for storing inputs
 
 display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>", unsafe_allow_html=True)
 
 
 
-limit = len(text) + 4
+chances = len(ans) + 4       #4 wrong attempts are acceptable
 
 t5.image('hangmanpics/1.jpg')
 
 
 letters[0] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 1 )
-if letters[0] and count!=limit and lose!=4 and win!=len(text):
-        win_check(letters[0],text)
-        l=update(letters[0],word,text)             #l stands for latent-word, it is used here to initiate looping sequence
+if letters[0] and count!=chances and l_count!=4 and w_count!=len(ans):
+        win_check(letters[0],ans)
+        l=update(letters[0],word,ans)             #l stands for latent-word, it is used here to initiate looping sequence
         letters[1]=t1.text_input(f'Enter a letter:', max_chars=1, key=2)
 j=1
 k=2
 while True:
-    if letters[j] and count!=limit and lose!=4 and win!=len(text):
-        win_check(letters[j],text)
-        l=update(letters[j],l,text)
+    if letters[j] and count!=chances and l_count!=4 and w_count!=len(ans):
+        win_check(letters[j],ans)
+        l=update(letters[j],l,ans)
         j+=1
         k+=1
         count+=1
