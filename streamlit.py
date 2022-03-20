@@ -72,8 +72,9 @@ letters[0] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 1 )
 if letters[0] and count!=limit and lose!=4 and win!=len(text):
         win_check(letters[0],text)
         l=update(letters[0],word,text)
+        letters[1]=t1.text_input(f'Enter a letter:', max_chars=1, key=2)
 j=1
-k=1
+k=2
 while True:
     if letters[j] and count!=limit and lose!=4 and win!=len(text):
         win_check(letters[j],text)
