@@ -1,6 +1,7 @@
 
    
 import streamlit as st
+from random import choice
 
 st.set_page_config( page_title = "CodingMan")
 #for page title
@@ -53,7 +54,9 @@ with col[1]:
     t5 = st.empty()
 
 
-text = "tuple"
+lst=['false','tuple','while','break','async','await','raise','yeild','count']                       #list of 5-aplhabet keyowrds in python!
+text=choice(lst)                                                                                    #the word to be found in game is selected and stored here
+
 word = "_ _ _ _ _ "
 limit = 0  #for attemted permissible inputs; which I took 4 more than the length of the word
 count = 1  #for counting the input
