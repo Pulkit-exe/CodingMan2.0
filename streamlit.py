@@ -22,19 +22,19 @@ def win_check(letter, text):
 
 def update(letter, word, text):
    global word
-    text = list(text)
-    word = list(word)
-    letter = letter.lower()
+   text = list(text)
+   word = list(word)
+   letter = letter.lower()
 
-    for i in range(len(text)):
-        if text[i] == letter:
-            word[2*i] = letter
+   for i in range(len(text)):      
+      if text[i] == letter:
+         word[2*i] = letter
 
-    new = ""
+   new = ""
 
-    globals()[word] = new.join(word)
-    u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
-    return word
+   globals()[word] = new.join(word)
+   u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
+   return word
 
 
 
