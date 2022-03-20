@@ -35,7 +35,7 @@ def update(letter, word, text):
    word=new
 
    u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
-   
+   return word
 
 
 
