@@ -22,7 +22,6 @@ def win_check(letter, text):
 
 def update(letter, word, text):
    global word
-    """ This function is to update the word after every input, to be displayed"""
     text = list(text)
     word = list(word)
     letter = letter.lower()
