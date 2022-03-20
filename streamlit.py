@@ -44,29 +44,26 @@ def update(letter,word,ans):
     return word
 
 
-tab=st.columns(6)                                                                                 #5 columns for input and 1 for hangman pics
+tab=st.columns(2)                                                                                 #5 columns for input and 1 for hangman pics
 with tab[0]:
     t1 = st.container()
 with tab[1]:
-    t2 = st.container()
-with tab[2]:
-    t3 = st.container()
-with tab[3]:
-    t4 = st.container()
-with tab[4]:
-    t5 = st.container()
-with tab[5]:
     t6=st.empty()
 
 
 t6.image('hangmanpics/1.jpg')
 
 
-win_meter('l',ans)
-st.write(f'{w_count}')
-st.write(f'{l_count}')
-
-update('l',word,ans)
+j=0
+alpha[j]=t1.text_input('Enter a letter:',max_chars=1,key=1)
+while True:
+    if aplha[j] and count!=chances and l_count!=4 and win!=len(ans):
+        win_meter(aplha[j],ans)
+        update(aplha[j],word,ans)
+        j+=1
+        count+=1
+        alpha[j]=t1.text_input('Enter a letter:', max_chars=1, key=j+1)
+        
 
 
 
