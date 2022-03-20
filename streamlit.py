@@ -31,7 +31,7 @@ def update(letter, word, text):
 
    new = ""
 
-   globals()[word1] = new.join(word)
+   word1 = new.join(word)
    u.markdown( f"<h1 style='text-align: center; color: red;'>{word1}</h1>", unsafe_allow_html=True)
    return word
 
