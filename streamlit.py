@@ -58,7 +58,7 @@ j=0
 alpha[j]=t1.text_input('Enter a letter:',max_chars=1,key=1)
 while True:
     if alpha[j] and count!=chances and l_count!=4 and w_count!=len(ans):
-        win_meter(aplha[j],ans)
+        win_meter(alpha[j],ans)
         update(alpha[j],word,ans)
         j+=1
         count+=1
