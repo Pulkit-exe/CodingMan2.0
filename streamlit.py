@@ -30,8 +30,10 @@ def update(letter, word, text):
          word[2*i] = letter
 
    new = ""
+   for i in word:
+      new+=i
+   word=new
 
-   word1 = new.join(word)
    u.markdown( f"<h1 style='text-align: center; color: red;'>{word1}</h1>", unsafe_allow_html=True)
    return word
 
@@ -53,7 +55,6 @@ with col[1]:
 
 text = "tuple"
 word = "_ _ _ _ _ "
-word1='_ _ _ _ _ '
 limit = 0  #for attemted permissible inputs; which I took 4 more than the length of the word
 count = 1  #for counting the input
 letters = ['', '', '', '', '', '','','','','','','','','',''] #for storing inputs
