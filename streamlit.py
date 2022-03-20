@@ -2,7 +2,7 @@ import streamlit as st
 from random import choice
 st.set_page_config('CodingMan')
 st.header('Coding Man 2.0')
-st.subheader('Only 5-letter keyword included.....')
+st.subheader('Only 5-letter keywords included.....')
 l=['false','tuple','while','break','async','await','raise','yeild','count']                       #list of 5-aplhabet keyowrds in python!
 ans=choice(l)                                                                                     #the word to be found in game is selected and stored here
 n=len(ans)                                                                                        #length of word since we are taking 5-letter keyword only
@@ -57,9 +57,9 @@ t6.image('hangmanpics/1.jpg')
 j=0
 alpha[j]=t1.text_input('Enter a letter:',max_chars=1,key=1)
 while True:
-    if aplha[j] and count!=chances and l_count!=4 and win!=len(ans):
+    if alpha[j] and count!=chances and l_count!=4 and win!=len(ans):
         win_meter(aplha[j],ans)
-        update(aplha[j],word,ans)
+        update(alpha[j],word,ans)
         j+=1
         count+=1
         alpha[j]=t1.text_input('Enter a letter:', max_chars=1, key=j+1)
