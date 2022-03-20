@@ -87,13 +87,13 @@ while True:
 
                                     
 
-if lose == 1:
+if l_count == 1:
     t5.image('hangmanpics/2.jpg')
-elif lose == 2:
+elif l_count == 2:
     t5.image('hangmanpics/3.jpg')
-elif lose == 3:
+elif l_count == 3:
     t5.image('hangmanpics/4.jpg')
-elif lose == 4:
+elif l_count == 4:
     t5.image('hangmanpics/5.jpg')
 
 
