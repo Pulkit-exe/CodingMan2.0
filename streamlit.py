@@ -1,11 +1,9 @@
 
    
 import streamlit as st
-from random import choice
 
-st.set_page_config( page_title = "CodingMan")
-#for page title
 
+st.set_page_config("CodingMan")
 lose = 0 #for tracking wrong inputs
 win = 0 #for tracking right inputs
 
@@ -19,6 +17,7 @@ def win_check(letter, text):
 
     if win == len(text):
         st.balloons()
+        st.write('You Win!!!!')
 
 
 def update(letter, word, text):
@@ -35,15 +34,12 @@ def update(letter, word, text):
       new+=i
    word=new
 
-   u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
+   display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>", unsafe_allow_html=True)
    return word
+st.header('CodingMan2.0')
+st.subheader('By:      Pulkit Rustagi :D')
 
-
-
-st.markdown("<h1 style='text-align: center; color: royalblue;'>CodingMan</h1>", unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: center; '>Customized Hangman For Python Programmers</h3>", unsafe_allow_html=True)
-
-u = st.empty() #for displaying the word
+display = st.empty() #for displaying the word
 
 col = st.columns(2)  #4 columns for input and 1 column for hangman in desktop version, this site is not responsive
 
@@ -55,13 +51,13 @@ with col[1]:
 
 
                                             
-text='false'
+text='while'
 word = "_ _ _ _ _ "
 limit = 0  #for attemted permissible inputs; which I took 4 more than the length of the word
 count = 1  #for counting the input
 letters = ['', '', '', '', '', '','','','','','','','','',''] #for storing inputs
 
-u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
+display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>", unsafe_allow_html=True)
 
 
 
@@ -73,7 +69,7 @@ t5.image('hangmanpics/1.jpg')
 letters[0] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 1 )
 if letters[0] and count!=limit and lose!=4 and win!=len(text):
         win_check(letters[0],text)
-        l=update(letters[0],word,text)
+        l=update(letters[0],word,text)             #l stands for latent-word, it is used here to initiate looping sequence
         letters[1]=t1.text_input(f'Enter a letter:', max_chars=1, key=2)
 j=1
 k=2
