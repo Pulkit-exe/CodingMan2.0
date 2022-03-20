@@ -21,6 +21,7 @@ def win_check(letter, text):
 
 
 def update(letter, word, text):
+   global word
     """ This function is to update the word after every input, to be displayed"""
     text = list(text)
     word = list(word)
@@ -32,7 +33,7 @@ def update(letter, word, text):
 
     new = ""
 
-    word = new.join(word)
+    globals()[word] = new.join(word)
     u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
