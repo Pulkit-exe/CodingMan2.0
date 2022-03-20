@@ -14,7 +14,7 @@ count=1                                                                         
 
 display=st.empty()                                                                                #for displaying the word variable
 display.markdown( f"<h1 style='text-align: center; color: green;'>{word}</h1>", unsafe_allow_html=True)
-alpha=['','','','','','','','','','','','','','','']                                              #for making list which stores inputs
+                                              #for making list which stores inputs
 
 
 
@@ -56,14 +56,14 @@ t6.image('hangmanpics/1.jpg')
 
 
 j=0
-alpha[j]=t1.text_input('Enter a letter:',max_chars=1,key=1)
+alpha=t1.text_input('Enter a letter:',max_chars=1,key=1)
 while True:
-    if alpha[j] and count!=chances and l_count!=4 and w_count!=len(ans):
-        win_meter(alpha[j],ans)
-        update(alpha[j],word,ans)
+    if alpha and count!=chances and l_count!=4 and w_count!=len(ans):
+        win_meter(alpha,ans)
+        update(alpha,word,ans)
         j+=1
         count+=1
-        alpha[j]=t1.text_input('Enter a letter:', max_chars=1, key=j+1)
+        alpha=t1.text_input('Enter a letter:', max_chars=1, key=j+1)
     else:
         break
         
