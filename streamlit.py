@@ -14,7 +14,7 @@ count=1                                                                         
 
 
 display=st.empty()                                                                                #for displaying the word variable
-display.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
+display.markdown( f"<h1 style='text-align: center; color: green;'>{word}</h1>", unsafe_allow_html=True)
 alpha=['','','','','','','','','','','','','','','']                                              #for making list which stores inputs
 
 
@@ -42,7 +42,7 @@ def update(letter, word, text):
     n_word = ""
 
     word = n_word.join(word)
-    u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
+    display.markdown( f"<h1 style='text-align: center; color: green;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
 
