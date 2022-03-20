@@ -72,9 +72,9 @@ letters[0] = t1.text_input(f"Enter a letter:", max_chars = 1, key = 1 )
 j=0
 k=1
 while True:
-    if letters[j] and count!=chances and lose!=4 and win!=len(text):
-        win_meter(alpha,ans)
-        update(alpha,word,ans)
+    if letters[j] and count!=limit and lose!=4 and win!=len(text):
+        win_meter(letters[j],text)
+        update(letters[j],word,text)
         j+=1
         k+=1
         count+=1
