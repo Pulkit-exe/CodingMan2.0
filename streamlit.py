@@ -63,6 +63,10 @@ while True:
         j+=1
         count+=1
         alpha[j]=t1.text_input('Enter a letter:', max_chars=1, key=j+1)
+    else:
+        st.write('You Lose!! :(,   better luck next time :)')
+        break
+        
         
 
 
