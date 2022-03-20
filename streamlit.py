@@ -30,18 +30,21 @@ def win_meter(letter,ans):
     if w_count==len(ans):
         st.balloons()
 
-def update(letter,word,ans):
-    letter=letter.lower()
-    word=list(word)
+def update(letter, word, text):
+    text = list(text)
+    word = list(word)
+    letter = letter.lower()
 
-    for i in range(n):
-        if ans[i]==letter:
-            word[2*i]=letter
-    
-    new=''
-    word=new.join(word)
-    display.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
+    for i in range(len(text)):
+        if text[i] == letter:
+            word[2*i] = letter
+
+    n_word = ""
+
+    word = n_word.join(word)
+    u.markdown( f"<h1 style='text-align: center; color: red;'>{word}</h1>", unsafe_allow_html=True)
     return word
+
 
 
 tab=st.columns(2)                                                                                 #5 columns for input and 1 for hangman pics
@@ -67,10 +70,6 @@ while True:
         break
         
         
-
-
-
-
 if l_count == 1:
     t6.image('hangmanpics/2.jpg')
 elif l_count == 2:
@@ -78,7 +77,7 @@ elif l_count == 2:
 elif l_count == 3:
     t6.image('hangmanpics/4.jpg')
 elif l_count == 4:
-    t6.image('hangmanpics/5.jpeg')
+    t6.image('hangmanpics/5.jpg')
 
 
 
