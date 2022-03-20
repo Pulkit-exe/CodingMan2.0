@@ -11,7 +11,6 @@ w_count=0                                                                       
 l_count=0                                                                                         #lose count variable
 chances=n+4                                                                                       #technically, we are giving 5 chances to user till hangwan dies                                                                                         #chances to play
 count=1                                                                                           #counter variable
-word1=''
 
 display=st.empty()                                                                                #for displaying the word variable
 display.markdown( f"<h1 style='text-align: center; color: green;'>{word}</h1>", unsafe_allow_html=True)
@@ -31,20 +30,17 @@ def win_meter(letter,ans):
         st.balloons()
 
 def update(letter, word, text):
-    global word1
-    text = list(text)
     word = list(word)
     letter = letter.lower()
 
-    for i in range(len(text)):
-        if text[i] == letter:
+    for i in range len(text):
+        if letter==text[i]:
             word[2*i] = letter
 
     n_word = ""
 
     word = n_word.join(word)
-    globals()[word1]=word
-    display.markdown( f"<h1 style='text-align: center; color: green;'>{word1}</h1>", unsafe_allow_html=True)
+    display.markdown( f"<h1 style='text-align: center; color: green;'>{word}</h1>", unsafe_allow_html=True)
     return word
 
 
