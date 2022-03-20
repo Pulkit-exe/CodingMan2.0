@@ -33,7 +33,7 @@ def update(letter, word, text):
     word = list(word)
     letter = letter.lower()
 
-    for i in range len(text):
+    for i in range (len(text)):
         if letter==text[i]:
             word[2*i] = letter
 
