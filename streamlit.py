@@ -34,7 +34,7 @@ def update(letter, word, text):
       new+=i
    word=new
 
-   display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>", unsafe_allow_html=True)
+   display.markdown( f"<h1 style='text-align: left; color: green;'>{word}</h1>", unsafe_allow_html=True)
    return word
 st.header('CodingMan2.0')
 st.subheader('By: Pulkit Rustagi :D')
