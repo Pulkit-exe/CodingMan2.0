@@ -1,7 +1,7 @@
 
    
 import streamlit as st
-
+from random import choice
 
 st.set_page_config("CodingMan")
 l_count = 0 #for tracking wrong inputs
@@ -51,7 +51,7 @@ with col[1]:
 
 
                                             
-ans='raise'
+ans=choice('raise','tuple','false')
 word = "_ _ _ _ _ "  
 count = 1                              #for counting the input
 letters = ['','','','','','','','','','']                                            #for storing inputs
