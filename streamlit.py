@@ -34,7 +34,7 @@ def update(letter, word, text):
       new+=i
    word=new
 
-   display.markdown( f"<h1 style='text-align: left; color: green;'>{word}</h1>", unsafe_allow_html=True)
+   display.markdown( f"<h1 style='text-align: left; color: cyan;'>{word}</h1>", unsafe_allow_html=True)
    return word
 st.header('CodingMan2.0')
 st.subheader('By: Pulkit Rustagi :D')
@@ -51,7 +51,7 @@ with col[1]:
 
 
                                             
-ans=choice('raise','tuple','false')
+ans='tuple'
 word = "_ _ _ _ _ "  
 count = 1                              #for counting the input
 letters = ['','','','','','','','','','']                                            #for storing inputs
