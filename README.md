@@ -36,7 +36,7 @@ Here are a few screenshots of the game in action:
 *Initial Screen*
 
 ![Correct Guess](hangmanpics/2.jpg)
-*Correct Guess*
+*Wrong Guess*
 
 ![Wrong Guess](hangmanpics/3.jpg)
 *Wrong Guess*
